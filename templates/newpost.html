@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h5> Welcome, {{ username }} </h5>
+    <h1>Add a Blog Entry</h1>
+    <form method='post'>
+        <label>
+            Title for your new blog:
+            <input type="text" name='title' />
+        </label>
+        <label>
+            Your new blog:
+            <input type="text" name='body' />            
+        </label>
+        <input type="submit" value='Add Entry' />
+    </form>
+
+    <hr />
+{% endblock %}

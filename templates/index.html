@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1> {{ page_title }} </h1>
+    <ul>
+        {% for user in all_users %}
+       <p><u> <a href="/landing?id={{blog.id}}">Blog Title: {{blog.title}}</a></u>
+        User: {{user.username}}</u>
+        <p>{{user.blogs}}</p>
+        <p>{{ user_submitted_blogs }}</p>
+       
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+       

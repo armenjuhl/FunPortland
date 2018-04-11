@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if body|length == 0 %}
+    <p>No entries yet</p>
+    {% else %}
+    pass
+    {% endif %}
+
+    <ul>
+        {% for posts in submitted_blogs %}
+       <p><u> <a href="/landing?id={{blog.id}}"> Blog Title: {{blog.title}}</a></u> 
+        <p>{{blog.body}}</p>
+       
+        {% endfor %}
+    </ul>
+
+{% endblock %}
